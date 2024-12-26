@@ -1,0 +1,152 @@
+.appContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: inter;
+}
+
+.sidebar {
+  min-width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.searchBar {
+  width: 366px;
+}
+.mainContent {
+  flex-grow: 1;
+  height: 100vh;
+  background-color: #fafafa;
+}
+.hideScroll{
+  overflow-y: hidden !important;
+}
+ul {
+  margin-bottom: 0;
+}
+.repoListItem:nth-child(odd) {
+  border-top: 1px solid rgb(220, 213, 213);
+  border-bottom: 1px solid rgb(220, 213, 213);
+}
+.repoListItem:last-child {
+  border-bottom: 0;
+}
+.repoListItem {
+  padding: 1rem 1rem !important;
+}
+.repoListItem h3 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: inter;
+}
+.repositories {
+  border: 1px solid rgb(220, 213, 213);
+  height: 100%;
+  overflow-y: scroll;
+}
+#totalRepoHead {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.repoListItem p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: inter;
+}
+.access {
+  color: #1570ef;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: inter;
+  background-color: #eff8ff;
+  border: 1px solid #b2ddff;
+  border-radius: 35px;
+  padding: 3px 6px 4px 6px;
+}
+.toggleBtn {
+  padding: 0;
+  border: none;
+  font-size: 20px;
+  background: none;
+}
+.sidebarIcon {
+  width: 24px;
+  height: 24px;
+}
+#repoListBlur {
+  background-color: #6c6c6c4d;
+}
+.mobileNav {
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  padding-left: 10px;
+  top: 135px;
+}
+.sidebarItems {
+  padding: 7px 10px;
+}
+.sidebarItems:hover {
+  background-color: #1570ef;
+  color: white;
+  border-radius: 10px;
+}
+.repositories::-webkit-scrollbar {
+  width: 8px;
+}
+
+.repositories::-webkit-scrollbar-thumb {
+  background-color: #a3a0a0;
+  border-radius: 4px;
+}
+.dimAccess{
+  background-color: #c9c6c6;
+}
+.repositories::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a0a0;
+}
+
+.repositories::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.hideVisBtns {
+  visibility: none !important;
+}
+.repositories::-webkit-scrollbar-button {
+  display: none;
+}
+#mobileViewHeader {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .sidebar {
+    display: none;
+  }
+  #mobileViewHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 15px 10px 18px;
+    border-bottom: 1px solid #dbd3d3;
+  }
+  .mainContent {
+    padding: 0 !important;
+    background: none !important;
+  }
+  .appContainer {
+    padding: 0;
+  }
+  .repositories {
+    border: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .searchBar {
+    width: 90vw;
+  }
+}
